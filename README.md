@@ -27,7 +27,7 @@
   ## Credits
   Created for This project was completed for the University of California Berkeley Extension Full Stack Developer Bootcamp.
   
-  The work herein is the authorship of Nathan Batchelder, Sergio Lamar, Leticia Nardi, Carter Supple, and Giap Vu.
+  The work herein is the authorship of Nathan Batchelder, Sergio Lamar, Letícia Nardi, Carter Supple, and Giap Vu.
   
   ## License
   
