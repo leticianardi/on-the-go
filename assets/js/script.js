@@ -53,8 +53,10 @@ function toggleMenu() {
     function(menuItem) { 
       menuItem.addEventListener("click", toggleMenu);
     }
-  )
-  
+  )  
 }
 
 hamburger.addEventListener("click", toggleMenu);
+
+
+
