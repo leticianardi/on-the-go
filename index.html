@@ -19,7 +19,7 @@
   <!-- this section is the user interface -->
   <section class="container is-flex is-fullheight">
     <nav class="card is-fluid">
-
+     
       <div class="whatever">
         <ul class="menu">
           <li><a href="https://github.com/leticianardi/project-game" class="menuItem" href="#Github">GitHub</a></li>
@@ -34,24 +34,27 @@
           <i class="closeIcon material-icons">close</i>
         </button>
 
-        <div class="field has-addons">
+        <div class="field has-addons" class="image is-10by3">
 
-          <p class="level-item has-text-centered"><input class="input is-medium" size="40" type="text"
+          <p class="has-ratio" class="level-item has-text-centered"><input class="input is-medium" size="40" type="text"
               placeholder="Find Bathrooms">
           </p>
-          <p class="control">
+          <p class="has-ratio" class="control">
             <button class="button is-primary is-medium" id="saveLocation" type="submit"> Search </button>
           </p>
         </div>
       </div>
 
-      <div class="container">
+      <!-- <div class="container"> -->
         <div class="mapouter">
+          <figure class="image is-1by1">
           <div class="gmap_canvas class="image is-1by1"><iframe class="has-ratio"
               src="https://www.google.com/maps/d/embed?mid=1Hd22_2CbXDCFLYyE5ggYC1mw1yBbpW_j" width="640"
               height="480"></iframe>
           </div>
+          </figure>
         </div>
+      <!-- </div> -->
     </nav>
   </section>
 
