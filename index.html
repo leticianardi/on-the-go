@@ -6,51 +6,86 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/css/reset.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
         <title>Home</title>
+
+        <script type="text/javascript">
+
+            function load() {
+                var mapDiv = document.getElementById("map");
+                var latlng = new google.maps.LatLng(37.397, -122.644);
+                var mapOptions =
+                {
+                    zoom: 8,
+                    center: latlng,
+                    //backgroundColor: '#ff0000',
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    //imageDefaultUI: true
+                };
+                var map = new google.maps.Map(mapDiv, mapOptions);
+                // map.addControl(new GSmallMapControl());
+                // map.addControl(new GMapTypeControl());
+                // map.addMapType(ROADMAP);
+                // map.setCenter(
+                // new GLatLng(37.4419, -122.1419), 13);
+            }
+
+        </script>
     </head>
     
     <!-- this is the displayed page -->
+    
     <body>
-        <!-- this section is the user interface -->
-        <section class="container is-flex is-fullheight">
-            <nav class="card is-fluid">
-                <div class="field has-addons">
-                    <p class="level-item has-text-centered"><input class="input is-medium" size="40" type="text"
-                        placeholder="Find Bathrooms">
-                    </p>
-                    <p class="control">
-                        <button class="button is-primary is-medium" id="saveLocation" type="submit"> Search </button>
-                    </p>
-                </div>
-            </nav>
-        <div class="container">
-            <div id="map"></div>
-                <script
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmHfuQJwMCXi2eNPE0MEeUQVYZvBRCCqY&callback=initMap&v=weekly&channel=2"
-                    async></script>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <!-- <a class="navbar-item" href="https://bulma.io">
+                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                </a> -->
+        
+                <!-- TODO burger menu is out due to time -->
+                <!-- <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a> -->
             </div>
+        
+            <div id="navbarBasicExample" class="navbar-menu is-active">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Home
+                    </a>
+        
+                    <a class="navbar-item">
+                        Documentation
+                    </a>
+
+                    <a class="navbar-item">
+                        About Us
+                    </a>
+                            
+                </div>
             
-        </section>
-
-
-<!-- this is the footer which houses links to other html pages -->
-<footer>
-    <ul class="columns is-centered">
-        <li><a href="https://github.com/leticianardi/project-game">Github</a></li>
-        <li><a href="legal.html">Legal</a></li>
-        <li><a href="assets/html/bio.html">About Us</a></li>
-        <li><a href="https://bootcamp.berkeley.edu/coding/">UC Berkeley Coding Boot Camp</a></li>
-    </ul>
-</footer>
-
-<!-- link to the java script file for user interaction/ site functionality -->
-<!-- <script src="assets/js/app.js"></script> -->
-
-
-
-<script src="assets/js/script.js"></script>
-</body>
+            <!-- TODO reactivate for user input in v2.0 -->
+            <!-- <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </nav>
+    
+        <!-- link to the java script file for user interaction/ site functionality -->
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/app.js"></script>
+    </body>
 
 </html>
