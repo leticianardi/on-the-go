@@ -32,15 +32,6 @@ footer {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-<<<<<<< HEAD
-/* styling for map div */
-#map {
-    /* The height is 400 pixels */
-  height: 400px;
-  /* The width is the width of the web page */
-  width: 100%;
-}
-=======
 .whatever {
     flex-direction: row;
     display: flex;
@@ -89,4 +80,3 @@ footer {
   .showMenu a:hover{
       background-color: #52796f;
   }
->>>>>>> 3945b5fef2dd35f3213608f488044b2da627a9a5
