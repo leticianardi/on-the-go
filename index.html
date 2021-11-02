@@ -1,72 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <title>Home</title>
+    </head>
+    
+    <!-- this is the displayed page -->
+    <body>
+        <!-- this section is the user interface -->
+        <section class="container is-flex is-fullheight">
+            <nav class="card is-fluid">
+                <div class="field has-addons">
+                    <p class="level-item has-text-centered"><input class="input is-medium" size="40" type="text"
+                        placeholder="Find Bathrooms">
+                    </p>
+                    <p class="control">
+                        <button class="button is-primary is-medium" id="saveLocation" type="submit"> Search </button>
+                    </p>
+                </div>
+            </nav>
+        <div class="container">
+            <div id="map"></div>
+                <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmHfuQJwMCXi2eNPE0MEeUQVYZvBRCCqY&callback=initMap&v=weekly&channel=2"
+                    async></script>
+            </div>
+            
+        </section>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <title>Home</title>
-</head>
 
-<!-- this is the displayed page -->
+<!-- this is the footer which houses links to other html pages -->
+<footer>
+    <ul class="columns is-centered">
+        <li><a href="https://github.com/leticianardi/project-game">Github</a></li>
+        <li><a href="legal.html">Legal</a></li>
+        <li><a href="assets/html/bio.html">About Us</a></li>
+        <li><a href="https://bootcamp.berkeley.edu/coding/">UC Berkeley Coding Boot Camp</a></li>
+    </ul>
+</footer>
 
-<body>
+<!-- link to the java script file for user interaction/ site functionality -->
+<!-- <script src="assets/js/app.js"></script> -->
 
-  <!-- this section is the user interface -->
-  <section class="container is-flex is-fullheight">
-    <nav class="card is-fluid">
-     
-      <div class="whatever">
-        <ul class="menu">
-          <li><a href="https://github.com/leticianardi/project-game" class="menuItem" href="#Github">GitHub</a></li>
-          <li><a href="assets/html/legal.html" class="menuItem" href="#legal">Legal</a></li>
-          <li><a href="assets/html/bio.html" class="menuItem" href="#about-us">About Us</a></li>
-          <li><a href="https://bootcamp.berkeley.edu/coding/" class="menuItem" href="#booting-camp">UC Berkeley
-              Coding Boot Camp</a></li>
-        </ul>
-        <button class="hamburger">
-          <!-- material icons https://material.io/resources/icons/ -->
-          <i class="menuIcon material-icons">menu</i>
-          <i class="closeIcon material-icons">close</i>
-        </button>
 
-        <figure class="image is-10by3">
-        <div class="field has-addons">
-          <p class="has-ratio" class="level-item has-text-centered"><input class="input is-medium" size="15" type="text"
-              placeholder="Find Bathrooms">
-          </p>
-          <p class="has-ratio" class="control">
-            <button class="button is-primary is-medium" id="saveLocation" type="submit"> Search </button>
-          </p>
-        </div>
-        </figure>
-      </div>
 
-      <!-- <div class="container"> -->
-        <div class="mapouter">
-          <figure class="image is-1by1">
-          <div class="gmap_canvas class="image is-1by1"><iframe class="has-ratio"
-              src="https://www.google.com/maps/d/embed?mid=1Hd22_2CbXDCFLYyE5ggYC1mw1yBbpW_j" width="640"
-              height="480"></iframe>
-          </div>
-          </figure>
-        </div>
-      <!-- </div> -->
-    </nav>
-  </section>
-
-  <!-- this is the footer which houses links to other html pages -->
-  <footer>
-
-  </footer>
-
-  <!-- link to the java script file for user interaction/ site functionality -->
-  <script src="assets/js/script.js"></script>
-  <script src="assets/js/app.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 
 </html>
