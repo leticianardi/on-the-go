@@ -29,3 +29,11 @@ footer {
     -webkit-text-fill-color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+/* styling for map div */
+#map {
+    /* The height is 400 pixels */
+  height: 400px;
+  /* The width is the width of the web page */
+  width: 100%;
+}

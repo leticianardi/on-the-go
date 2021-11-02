@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Home</title>
-</head>
-
-<!-- this is the displayed page -->
-<body>
-<!-- this section is the user interface -->
-<section class="container is-flex is-fullheight">
-    <nav class="card is-fluid">
-        <div class="field has-addons">
-            <p class="level-item has-text-centered"><input class="input is-medium" size="40" type="text"
-                    placeholder="Find Bathrooms">
-            </p>
-            <p class="control">
-                <button class="button is-primary is-medium" id="saveLocation" type="submit"> Search </button>
-            </p>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <title>Home</title>
+    </head>
+    
+    <!-- this is the displayed page -->
+    <body>
+        <!-- this section is the user interface -->
+        <section class="container is-flex is-fullheight">
+            <nav class="card is-fluid">
+                <div class="field has-addons">
+                    <p class="level-item has-text-centered"><input class="input is-medium" size="40" type="text"
+                        placeholder="Find Bathrooms">
+                    </p>
+                    <p class="control">
+                        <button class="button is-primary is-medium" id="saveLocation" type="submit"> Search </button>
+                    </p>
+                </div>
+            </nav>
         <div class="container">
-            <div class="mapouter">
-                <div class="gmap_canvas"><iframe src="https://www.google.com/maps/d/embed?mid=1Hd22_2CbXDCFLYyE5ggYC1mw1yBbpW_j" width="640"
-                height="480"></iframe>
+            <div id="map"></div>
+                <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmHfuQJwMCXi2eNPE0MEeUQVYZvBRCCqY&callback=initMap&v=weekly&channel=2"
+                    async></script>
             </div>
-        </div>
-    </nav>
-</section>
+            
+        </section>
+
 
 <!-- this is the footer which houses links to other html pages -->
 <footer>
@@ -43,6 +46,10 @@
 </footer>
 
 <!-- link to the java script file for user interaction/ site functionality -->
-<script src="assets/js/app.js"></script>
+<!-- <script src="assets/js/app.js"></script> -->
+
+
+
+<script src="assets/js/script.js"></script>
 </body>
 </html>
