@@ -4,6 +4,7 @@
   box-sizing: border-box;
   overflow: hidden;
 }
+
 .container {
     align-items: center;
     justify-content: center;
@@ -30,13 +31,19 @@ footer {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.whatever {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .hamburger {
-    position: fixed;
+    text-decoration: none;
+    position: relative;
     z-index: 100;
-    top: 1rem;
-    right: 1rem;
     padding: 4px;
-    border: black solid 1px;
+    border: black;
     background: white;
     cursor: pointer;
   }
@@ -46,20 +53,29 @@ footer {
   }
 
   .menu {
-    position: fixed;
-    transform: translateY(-100%);
+    position: absolute;
+    text-decoration: none;
+    transform: translateY(-150%);
     transition: transform 0.2s;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     z-index: 99;
     background: black;
     color: white;
     list-style: none;
-    padding-top: 4rem;
+    padding: 0.5rem;
+    top: 50px;
   }
 
   .showMenu {
     transform: translateY(0);
+    text-decoration: none;
+    background-color: white;
+    color: black;
+  }
+
+  .showMenu a {
+      color: black
+  }
+
+  .showMenu a:hover{
+      background-color: #52796f;
   }
