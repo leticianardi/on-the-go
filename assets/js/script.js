@@ -47,7 +47,7 @@ function formSubmit(event) {
 
 
 // event listner for formSubmit function
-mapSearchInput.addEventListner("submit", formSubmit);
+mapSearchInput.addEventListener("submit", formSubmit);
 
 // global variables for the cordinateLatLngResults function
 var locationResult = document.querySelector("#location");
