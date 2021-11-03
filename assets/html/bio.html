@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <script src="https://kit.fontawesome.com/57d0cf360e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/app.js"></script>
@@ -18,145 +18,151 @@
 </head>
 
 <!-- background image -->
-
 <body class=bg-img>
-    <!-- this is the displayed page -->
+    
+<!-- this is the displayed page -->
 <main>
-
-
-  <div class="columns">
-    <div class="column">
-      <div class="container">
-        <p class="title is-1 is-spaced">
-          About Us
-        </p>
-      </div>
+    <div class="pt-4 tabs is-centered is-toggle is-toggle-rounded hasbackground-white-bis">
+        <ul>
+         <!-- todo there was a class of 'is-active'inside the <li> element.  need to research how to make the active tab highlighted -->
+            <li>
+                 <!-- todo this is fucked. fix this link please. -->
+                <a href="">
+                <span class="icon is-small "><i class="fas fa-toilet"></i></span>
+                <span>Home</span>                        
+                </a>
+            </li>
+            <li >
+                <a href="https://github.com/leticianardi/project-game">
+                <span class="icon is-small"><i class="fab fa-github"></i></span>
+                <span>Repository</span>
+                </a>
+            </li>
+            <li>
+                <a href="./assets/html/bio.html">
+                <span class="icon is-small"><i class="fas fa-address-card"></i></span>
+                <span>About Us</span>
+                </a>
+            </li>
+        </ul>
     </div>
 
-  </div>
-  <div class="columns">
-    <div class="container">
-      <div class="column">
-        <div class="columns">
+<div class="is-ten is-offset-1 has-background-white-bis">
+    <p>About Us</p>
+</div>
 
-          <!-- Carter Supple -->
-          <div class="column">
-            <h2 class="title is-3 is-spaced">Carter Supple</h2>
-            <div class="column">
-              <p class="bd-notification is-info subtitle is-5">
-                <span class="icon is-small"><i class="fab fa-github"></i></span>
-                <a href="https://github.com/cartersupple" target="_blank">@cartersupple</a>
-              </p>
-              <p class="bd-notification is-info subtitle is-5">
-                <span class="icon is-small"><i class="far fa-envelope"></i></span>
-                <a href="mailto:info@cartersupple123@gmail.com">cartersupple123@gmail.com</a>
-              </p>
-              <p class="bd-notification is-info subtitle is-5">
-                <span class="icon is-small "><i class="fas fa-mobile-alt"></i></span>
-                <a href="tel:+14157475930" target="_blank">(415) 378 1797</a>
-              </p>
-            </div>
-          </div>
+<div class="columns is-desktop">
+    <!-- Carter Supple -->
+    <div class="column">
+        <p><span class="icon is-small"><i class="fab fa-github"></i></span>
+        <a href="https://github.com/zvu" target="_blank">@zvu</a>
+        </p>
+    </div>
 
-          <!-- Giap Vu -->
-          <div class="column">
-            <h2 class="title is-3 is-spaced">Giap Vu</h2>
-            <div class="column">
-              <p class="bd-notification is-info subtitle is-5">
+
+
+    <div class="column">4</div>
+    <div class="column">6</div>
+    <div class="column">4</div>
+    <div class="column">5</div>
+</div>
+
+
+
+<div class="columns">
+    <!-- this is the about us title -->
+  <div class="column">
+      <!-- todo make this large! -->
+    <p class="bd-notification is-info">About Us</p>
+    <div class="columns">
+        <!-- Carter Supple -->
+        <div class="column">
+            <p class="bd-notification is-info">Carter Supple</p>
+            <p>
                 <span class="icon is-small"><i class="fab fa-github"></i></span>
                 <a href="https://github.com/zvu" target="_blank">@zvu</a>
-              </p>
-              <p class="bd-notification is-info subtitle is-5">
+            </p>
+            <p>
                 <span class="icon is-small"><i class="far fa-envelope"></i></span>
                 <a href="mailto:info@lilsensee@gmail.com">lilsensee@gmail.com</a>
-              </p>
-              <p class="bd-notification is-info subtitle is-5">
+            </p>
+            <p>
                 <span class="icon is-small "><i class="fas fa-mobile-alt"></i></span>
-                <a href="tel:+14157475930" target="_blank">(408)
-                  313 8809<a>
-              </p>
-            </div>
-          </div>
-
-          <!-- Letícia Nardi -->
-          <div class="column">
-            <h2 class="title is-3 is-spaced">Letícia Nardi</h2>
-            <div class="column">
-              <p class="bd-notification is-info subtitle is-5"> <span class="icon is-small"><i
-                    class="fab fa-github"></i></span>
-                <a href="https://github.com/leticianardi" target="_blank">@leticianardi</a>
-              </p>
-              <p class="bd-notification is-info subtitle is-5"> <span class="icon is-small"><i
-                    class="far fa-envelope"></i></span>
-                <a href="mailto:info@leticia.tnardi@gmail.com">leticia.tnardi@gmail.com</a>
-              </p>
-              <p class="bd-notification is-info subtitle is-5"> <span class="icon is-small "><i
-                    class="fas fa-mobile-alt"></i></span>
-                <a href="tel:+14157475930" target="_blank">(715)
-                  747 5930<a>
-              </p>
-            </div>
-          </div>
-
+                <a href="tel:+14157475930" target="_blank">408-313-8809<a>
+            </p>
         </div>
-      </div>
     </div>
-  </div>
-
-  <div class="columns">
-    <div class="container">
-      <div class="column">
-        <div class="columns">
-
-
-          <!-- Nathan Batchelder -->
-          <div class="column">
-            <h2 class="title is-3 is-spaced">Nathan Batchelder</h2>
-            <div class="column">
-              <p class="bd-notification is-info subtitle is-5"> <span class="icon is-small"><i
-                    class="fab fa-github"></i></span>
-                <a href="https://github.com/NateBatchelder" target="_blank">@NateBatchelder</a>
-              </p>
-              <p class="bd-notification is-info subtitle is-5"> <span class="icon is-small"><i
-                    class="far fa-envelope"></i></span>
-                <a href="mailto:info@natebatchelder@gmail.com">natebatchelder@gmail.com</a>
-              </p>
-              <p class="bd-notification is-info subtitle is-5"> <span class="icon is-small "><i
-                    class="fas fa-mobile-alt"></i></span>
-                <a href="tel:+7747222276" target="_blank">(774)
-                  722 2276</a>
-              </p>
-            </div>
-          </div>
-
-          <!-- Sergio Lamar -->
-          <div class="column">
-            <h2 class="title is-3 is-spaced">Sergio Lamar</h2>
-            <div class="column">
-              <p class="bd-notification is-info subtitle is-5">
+    <div class="columns">
+        <!-- Giap Vu -->
+        <div class="column">
+            <p class="bd-notification is-info">Giap Vu</p>
+            <p>
                 <span class="icon is-small"><i class="fab fa-github"></i></span>
-                <a href="https://github.com/TenderDigits" target="_blank">@TenderDigits</a>
-              </p>
-              <p class="bd-notification is-info subtitle is-5"> <span class="icon is-small"><i
-                    class="far fa-envelope"></i></span>
-                <a href="mailto:info@sergio.lamar@gmail.com">sergio.lamar@gmail.com</a>
-              </p>
-              <p class="bd-notification is-info subtitle is-5"> <span class="icon is-small "><i
-                    class="fas fa-mobile-alt"></i></span>
-                <a href="tel:+14157475930" target="_blank">(707)
-                  641 9304</a>
-              </p>
-            </div>
-          </div>
+                <a href="https://github.com/zvu" target="_blank">@zvu</a>
+            </p>
+            <p>
+                <span class="icon is-small"><i class="far fa-envelope"></i></span>
+                <a href="mailto:info@lilsensee@gmail.com">lilsensee@gmail.com</a>
+            </p>
+            <p>
+                <span class="icon is-small "><i class="fas fa-mobile-alt"></i></span>
+                <a href="tel:+14157475930" target="_blank">408-313-8809<a>
+            </p>
+        </div>
+    </div>  
+        <!-- Letícia Nardi -->
+        <div class="column">
+            <p class="bd-notification is-info">Letícia Nardi</p>
+            <p>
+                <span class="icon is-small"><i class="fab fa-github"></i></span>
+                <a href="https://github.com/zvu" target="_blank">@zvu</a>
+            </p>
+            <p>
+                <span class="icon is-small"><i class="far fa-envelope"></i></span>
+                <a href="mailto:info@lilsensee@gmail.com">lilsensee@gmail.com</a>
+            </p>
+            <p>
+                <span class="icon is-small "><i class="fas fa-mobile-alt"></i></span>
+                <a href="tel:+14157475930" target="_blank">408-313-8809<a>
+            </p>
+        </div>
+        <!-- Nathan Batchelder -->
+        <div class="column">
+            <p class="bd-notification is-info">Nathan Batchelder</p>
+            <p>
+              <span class="icon is-small"><i class="fab fa-github"></i></span>
+                <a href="https://github.com/zvu" target="_blank">@zvu</a>
+            </p>
+            <p>
+                <span class="icon is-small"><i class="far fa-envelope"></i></span>
+                <a href="mailto:info@lilsensee@gmail.com">lilsensee@gmail.com</a>
+            </p>
+            <p>
+                <span class="icon is-small "><i class="fas fa-mobile-alt"></i></span>
+                <a href="tel:+14157475930" target="_blank">408-313-8809<a>
+            </p>
+        </div>
+        <!-- Sergio Lamar -->
+        <div class="column">
+            <p class="bd-notification is-info">Sergio Lamar</p>
+            <p>
+              <span class="icon is-small"><i class="fab fa-github"></i></span>
+                <a href="https://github.com/zvu" target="_blank">@zvu</a>
+            </p>
+            <p>
+                <span class="icon is-small"><i class="far fa-envelope"></i></span>
+                <a href="mailto:info@lilsensee@gmail.com">lilsensee@gmail.com</a>
+            </p>
+            <p>
+                <span class="icon is-small "><i class="fas fa-mobile-alt"></i></span>
+                <a href="tel:+14157475930" target="_blank">408-313-8809<a>
+            </p>
+        </div>
 
-          <div class="column">
-
-          </div>
-
-
-
-
-
+    </div>
+  </div> 
+  
+</div>
 
 
         </div>
