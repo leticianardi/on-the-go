@@ -85,7 +85,7 @@ async function myMap() {
       // Prevent actual submit
       e.preventDefault();
 
-      var location = document.getElementById('location-input').value;
+      var location = document.getElementById('map-search-input').value;
 
       axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
         params:{
@@ -99,14 +99,15 @@ async function myMap() {
 
         
         // Geometry
-        var lat = response.data.results[0].geometry.location.lat;
-        var lng = response.data.results[0].geometry.location.lng;
+        let lat = response.data.results[0].geometry.location.lat;
+        let lng = response.data.results[0].geometry.location.lng;
+                console.log(lat);
+        console.log(lng);
+
         var geometryOutput = `
-          <ul class="list-group">
-            <li class="list-group-item"><strong>Latitude</strong>: ${lat}</li>
-            <li class="list-group-item"><strong>Longitude</strong>: ${lng}</li>
-          </ul>
-        `;
+        https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=5&lat=${lat}&lng=${lng}`;
+        
+     console.log(geometryOutput);
 
         // Output to app
         document.getElementById('geometry').innerHTML = geometryOutput;
@@ -118,9 +119,8 @@ async function myMap() {
 
     // insert geocoding 
     // fetch result to store lat and lng
-    let lat 
-    let lng
-    fetch(`https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=5&lat=${37.7613568}&lng=${-122.4399466}`)
+  
+    await fetch(`https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=5&lat=${37.7613568}&lng=${-122.4399466}`)
         .then(response => response.json())
         .then(data => {
             for (i = 0; i < data.length; i++) {
