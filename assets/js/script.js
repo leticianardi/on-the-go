@@ -1,70 +1,94 @@
 let map;
+var bathroomsList = [];
+// function initMap() {
+//   map = new google.maps.Map(document.getElementById("map"), {
+//     zoom: 2,
+//     center: new google.maps.LatLng(2.8, -187.3),
 
-// initialize the map
-function initMap() {
-// map location
-  const sfran = { lat: 37.773, lng: -122.431 };
-  map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 12,
-    center: { lat: -34.397, lng: 150.644 },
-  });
-
-  // // add a marker
-  // const marker = new google.maps.Marker({
-  //   position: sfran,
-  //   map: map,
-  // });
-
-}
-
-
-
-
-//   map = new google.maps.Map(document.querySelector("mapouter"), {
-//     zoom: 12.74,
-//     center: new google.maps.LatLng(37.7586995,-122.4359033,),
-//     mapTypeId: "default",
 //   });
 
 //   // Create a <script> tag and set the USGS URL as the source.
 //   const script = document.createElement("script");
 
 //   // This example uses a local copy of the GeoJSON stored at
-//   // https://www.refugerestrooms.org/api/v1/restrooms?page=1&per_page=20&offset=0
+//   // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
 //   script.src =
-//     "https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js";
-//   document.getElementsByTagName("head")[0].appendChild(script);
+//     "https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=5&lat=37.7586995&lng=-122.43590333";
+
+//     document.getElementsByTagName("head")[0].appendChild(script);
 // }
 
+async function myMap() {
+    var mapProp = {
+        center: new google.maps.LatLng(37.7586995, -122.120850),
+        zoom: 11,
+        mapTypeId: "terrain",
+
+    };
+    const uluru = { lat: 37.344, lng: -122.036 };
+    // insert geocoding 
+    // fetch result to store lat and lng
+    let lat 
+    let lng
+    fetch(`https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=5&lat=${37.7586995}&lng=${-122.120850}`)
+        .then(response => response.json())
+        .then(data => {
+            for (i = 0; i < data.length; i++) {
+                var dataPoint = data[i]
+               // console.log(data[i])
+                bathroomsList.push(dataPoint)
+            }
+            
+
+        })
+        .then(()=> {    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        console.log(bathroomsList);
+        
+            for(i=0; i < bathroomsList.length; i++) {
+                console.log(bathroomsList[i])
+                var dataPoint = bathroomsList[i];
+
+                const marker = new google.maps.Marker({
+                    position: { lat: dataPoint.latitude, lng: dataPoint.longitude},
+                    map: map,
+                });
+    
+        }
+        
+
+        }) 
+
+}
+
+async function getRestrooms() {
+    fetch("https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=5&lat=37.7586995&lng=-122.43590333")
+        .then(response => response.json())
+        .then(data => {
+            for (i = 0; i < data.length; i++) {
+                var dataPoint = data[i]
+               // console.log(data[i])
+                bathroomsList.push(dataPoint)
+            }
+            
+
+        });
+}
+// initMap();
 // Loop through the results array and place a marker for each
 // set of coordinates.
-<<<<<<< HEAD
-// const eqfeed_callback = function (results) {
-//   for (let i = 0; i < results.features.length; i++) {
-//     const coords = results.features[i].geometry.coordinates;
-//     const latLng = new google.maps.LatLng(coords[1], coords[0]);
-
-//     new google.maps.Marker({
-//       position: latLng,
-//       map: map,
-//     });
-//   }
-// };
-=======
 const eqfeed_callback = function (results) {
-  for (let i = 0; i < results.features.length; i++) {
-    const coords = results.features[i].geometry.coordinates;
-    const latLng = new google.maps.LatLng(coords[1], coords[0]);
+    for (let i = 0; i < results.features.length; i++) {
+        const coords = results.features[i].geometry.coordinates;
+        const latLng = new google.maps.LatLng(coords[1], coords[0]);
 
-    new google.maps.Marker({
-      position: latLng,
-      map: map,
-    });
-  }
+        new google.maps.Marker({
+            position: latLng,
+            map: map,
+        });
+    }
 };
-
 // toggling the menu
-const menu = document.querySelector(".menu");
+/* const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger= document.querySelector(".hamburger");
 const closeIcon= document.querySelector(".closeIcon");
@@ -88,8 +112,4 @@ function toggleMenu() {
   )  
 }
 
-hamburger.addEventListener("click", toggleMenu);
-
-
-
->>>>>>> 3945b5fef2dd35f3213608f488044b2da627a9a5
+hamburger.addEventListener("click", toggleMenu); */
