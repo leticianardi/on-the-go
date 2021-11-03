@@ -72,7 +72,50 @@ async function myMap() {
 
     };
       
-   
+       // Call Geocode
+    //geocode();
+
+    // Get location form
+    var locationForm = document.getElementById('location-form');
+
+    // Listen for submiot
+    locationForm.addEventListener('submit', geocode);
+
+    function geocode(e){
+      // Prevent actual submit
+      e.preventDefault();
+
+      var location = document.getElementById('location-input').value;
+
+      axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+        params:{
+          address:location,
+          key:'AIzaSyDmHfuQJwMCXi2eNPE0MEeUQVYZvBRCCqY'
+        }
+      })
+      .then(function(response){
+        // Log full response
+        console.log(response);
+
+        
+        // Geometry
+        var lat = response.data.results[0].geometry.location.lat;
+        var lng = response.data.results[0].geometry.location.lng;
+        var geometryOutput = `
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Latitude</strong>: ${lat}</li>
+            <li class="list-group-item"><strong>Longitude</strong>: ${lng}</li>
+          </ul>
+        `;
+
+        // Output to app
+        document.getElementById('geometry').innerHTML = geometryOutput;
+      })
+      .catch(function(error){
+        console.log(error);
+      });
+    }
+
     // insert geocoding 
     // fetch result to store lat and lng
     let lat 
