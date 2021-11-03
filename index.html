@@ -16,13 +16,13 @@
 
     </head>
     
+    <!-- background image -->
+    <body class=bg-img>
     <!-- this is the displayed page -->
-    
-    <body>
     <main>
 
         <!-- todo is-transparent  -->
-        <div class="pt-4 tabs is-centered is-toggle is-toggle-rounded">
+        <div class="pt-4 tabs is-centered is-toggle is-toggle-rounded hasbackground-white-bis">
             <ul>
                 <!-- todo there was a class of 'is-active'inside the <li> element.  need to research how to make the active tab highlighted -->
                     <li>
@@ -58,27 +58,19 @@
             </div>
             
             <!-- todo build this out to contain instructions -->
-            <section class="section">
-                <h1 class="title">Section</h1>
+            <section class="section has-background-white-bis">
+                <h1 class="title">About</h1>
                 <h2 class="subtitle">
-                    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
+                    <p>Driving as a ride-share driver is hard enough as it is. Finding a restroom in 2021 should be the easy part. Unfortuately, it isn't.</p>
+
+                </br>
+                        
+                    <p>Most businesses, gas stations, grocery, and drug stores keep their facilities locked. There are portables scattered across the city but most are locked after hours. Its an unreliable and time consuming process. <strong>ON THE GO</strong> elimnates the guessing and saves drivers money by identifing locations with an open restroom, updated by users of the app. When a driver is looking for a bathroom, they can find one within the app. </p>
                 </h2>
             </section>
             
             <!-- todo this is the imupt field for city search -->
-            <div class="control has-icons-left has-icons-right">
-                <input class="input is-medium" type="email" placeholder="Email">
-                <span class="icon is-left">
-                    <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon is-right">
-                    <i class="fas fa-check"></i>
-                </span>
-            </div>
-            
-            <i class="fa-solid fa-location-crosshairs"></i>
-            
-            <div class="column is-two-thirds is-offset-2">
+            <div class="column is-two-thirds is-offset-2 pt-6 pb-4">
                 <div class="control has-icon-left has-icons-right">
                     <input class="input is-focused is-rounded is-large" type="text" placeholder="Enter City or Location">
                     <span class="icon is-left">
@@ -88,46 +80,44 @@
                         <i class="fas fa-check"></i>
                     </span>
                 </div>
-            </div>
+                      
             
-            
-            <div class="container is-fluid">
-                <div class="notification is-primary has-background-white-bis has-text-black-bis">
-                    This container is <strong>fluid</strong>: it will have a 32px gap on either side, on any
-                    viewport size.
-                                   
-                    <!-- div class="container" -->
+            <div class="column pt-6">
+                <div class="notification is-primary has-background-white-bis">
+                <!-- div class="container" -->
                     <div class="mapouter">
                         <!-- <figure class="image is-1by1"> -->
                             <div id="map"></div>
-                            <div id="googleMap" style="width:auto;height: 1000px;"></div>
+                            <div id="googleMap" style="width: auto;height: 800px;"></div>
                         </figure>
                     </div>                    
                 </div>
             </div>
+        </div>
             
-            <!-- todo this would be a great place for a badge! -->
-            <footer class="footer has-background-white">
-                <div class="content has-text-centered">
-                    <p>
-                        <strong>On The Go</strong> by <a href="assets/html/bio.html">Group Eight</a>. Licensed through 
-                        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
-                    </p>
-                </div>
-            </footer>
-            
-            
-            
-            
-            
-            
-        </main>
-            
-            <script
+        
+        
+        
+        
+        
+        
+    </main>
+    
+    <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmHfuQJwMCXi2eNPE0MEeUQVYZvBRCCqY&callback=myMap&v=weekly"
           ></script>
-        <!-- link to the java script file for user interaction/ site functionality -->
+          <!-- link to the java script file for user interaction/ site functionality -->
     </body>
+
+        <!-- todo this would be a great place for a badge! -->
+        <footer class="footer has-background-white-bis">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>On The Go</strong> by <a href="assets/html/bio.html">Group Eight</a>. Licensed through 
+                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+                </p>
+            </div>
+        </footer>
     </html>
     
     <!-- this section is the user interface -->
