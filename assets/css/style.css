@@ -6,8 +6,16 @@
         background-size:  cover;
         display: block; 
       max-width: 100%;
-      height: auto;
+      
+}
 
+body {
+  height: 1000px;
+}
+
+footer {
+  margin-top: 700px;
+}
 
 
 
