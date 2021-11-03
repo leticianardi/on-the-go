@@ -22,6 +22,8 @@
   ![Screen Shot 2021-10-26 at 10 35 45 PM](https://user-images.githubusercontent.com/89411805/139006072-e28dcec6-d369-4049-8d77-ae04af8bfe76.png)
 
   ## Installation
+  [![github repo size](https://img.shields.io/github/repo-size/leticianardi/on-the-go?style=plastic)](https://github.com/leticianardi)
+  [![alt-text](https://img.shields.io/github/downloads/leticianardi/on-the-go/latest/total)](https://github.com/leticianardi)
  
 
   ## Usage
@@ -41,10 +43,8 @@
   ## License
   
   [![License](https://img.shields.io/badge/license-MIT-blue)](https://choosealicense.com/licenses/mit/)
-  [![github repo size](https://img.shields.io/github/repo-size/leticianardi/on-the-go?style=plastic)](https://github.com/leticianardi)
-  [![alt-text](https://img.shields.io/github/downloads/leticianardi/on-the-go/latest/total)](https://github.com/leticianardi)
   [![alt-text](https://img.shields.io/github/contributors/leticianardi/on-the-go)](https://github.com/leticianardi)
   [![alt-text](https://img.shields.io/github/issues-raw/leticianardi/on-the-go)](https://github.com/leticianardi)
   [![alt-text](https://img.shields.io/badge/made%20with-html-blue)](https://github.com/leticianardi)
-[![alt-text](https://img.shields.io/badge/made%20with-css-green)](https://github.com/leticianardi)
-[![alt-text](https://img.shields.io/badge/made%20with-bulma-orange)](https://github.com/leticianardi)
+  [![alt-text](https://img.shields.io/badge/made%20with-css-green)](https://github.com/leticianardi)
+  [![alt-text](https://img.shields.io/badge/made%20with-bulma-orange)](https://github.com/leticianardi)
