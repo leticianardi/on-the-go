@@ -53,4 +53,6 @@
   [![alt-text](https://img.shields.io/github/downloads/leticianardi/on-the-go/latest/total)](https://github.com/leticianardi)
   [![alt-text](https://img.shields.io/github/contributors/leticianardi/on-the-go)](https://github.com/leticianardi)
   [![alt-text](https://img.shields.io/github/issues-raw/leticianardi/on-the-go)](https://github.com/leticianardi)
-  
+  [![alt-text](https://img.shields.io/badge/made%20with-html-blue)](https://github.com/leticianardi)
+[![alt-text](https://img.shields.io/badge/made%20with-css-green)](https://github.com/leticianardi)
+[![alt-text](https://img.shields.io/badge/made%20with-bulma-orange)](https://github.com/leticianardi)
