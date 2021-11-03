@@ -9,30 +9,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-        <title>Home</title>
+        <title>On the Go</title>
 
-        <script type="text/javascript">
-
-            function load() {
-                var mapDiv = document.getElementById("map");
-                var latlng = new google.maps.LatLng(37.397, -122.644);
-                var mapOptions =
-                {
-                    zoom: 8,
-                    center: latlng,
-                    //backgroundColor: '#ff0000',
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    //imageDefaultUI: true
-                };
-                var map = new google.maps.Map(mapDiv, mapOptions);
-                // map.addControl(new GSmallMapControl());
-                // map.addControl(new GMapTypeControl());
-                // map.addMapType(ROADMAP);
-                // map.setCenter(
-                // new GLatLng(37.4419, -122.1419), 13);
-            }
-
-        </script>
     </head>
     
     <!-- this is the displayed page -->
@@ -43,7 +21,7 @@
                 <!-- todo there was a class of 'is-active'inside the <li> element.  need to research how to make the active tab highlighted -->
                 <li>
                     <a>
-                        <span class="icon is-small"><i class="fas fa-toilet"></i></span>
+                        <span class="icon is-small "><i class="fas fa-toilet"></i></span>
                         <span>Home</span>
                     </a>
                 </li>
@@ -62,6 +40,7 @@
             </ul>
         </div>
 
+        <!-- this is a placeholder for a popup/ maybe instructions/ maybe ...? -->
         <div class="modal">
             <div class="modal-background"></div>
             <div class="modal-content">
@@ -80,15 +59,65 @@
             </h2>
         </section>
 
+        <!-- todo this is the imupt field for city search -->
+        <div class="control has-icons-left has-icons-right">
+            <input class="input is-medium" type="email" placeholder="Email">
+            <span class="icon is-left">
+                <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-right">
+                <i class="fas fa-check"></i>
+            </span>
+        </div>
+        
+        <i class="fa-solid fa-location-crosshairs"></i>
+        
+        <div class="column is-two-thirds is-offset-2">
+            <div class="control has-icon-left has-icons-right">
+                <input class="input is-focused is-rounded is-large" type="text" placeholder="Enter City or Location">
+                <span class="icon is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-right">
+                    <i class="fas fa-check"></i>
+                </span>
+            </div>
+        </div>
+        
+            
         <div class="container is-fluid">
             <div class="notification is-primary has-background-white-bis has-text-black-bis">
                 This container is <strong>fluid</strong>: it will have a 32px gap on either side, on any
                 viewport size.
+                <div>
+                    <figure class="image is-10by3">
+                        <div class="field has-addons">
+                            <p class="has-ratio" class="level-item has-text-centered"><input class="input is-medium" size="15" type="text"
+                                placeholder="Find Bathrooms">
+                            </p>
+                            <p class="has-ratio" class="control">
+                            <button class="button is-primary is-medium" id="saveLocation" type="submit"> Search </button>
+                            </p>
+                        </div>
+                    </figure>
+                </div>
+                
+                <!-- div class="container" -->
+                <div class="mapouter">
+                    <figure class="image is-1by1">
+                        <div class="gmap_canvas class=" image is-1by1"><iframe class="has-ratio"
+                                src="https://www.google.com/maps/d/embed?mid=1Hd22_2CbXDCFLYyE5ggYC1mw1yBbpW_j" width="640"
+                                height="480"></iframe>
+                        </div>
+                    </figure>
+                </div>
+                
+
             </div>
         </div>
         
 
-        <footer class="footer">
+        <footer class="footer has-background-white">
             <div class="content has-text-centered">
                 <p>
                     <strong>On The Go</strong> by <a href="assets/html/bio.html">Group Eight</a>. Liscensed through 
