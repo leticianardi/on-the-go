@@ -21,7 +21,7 @@ var bathroomsList = [];
 async function myMap() {
     var mapProp = {
         center: new google.maps.LatLng(37.7586995, -122.120850),
-        zoom: 10,
+        zoom: 11,
         mapTypeId: "terrain",
 
     };
