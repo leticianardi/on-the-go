@@ -1,0 +1,23 @@
+body {
+    height: 1000px;
+  }
+  
+footer {
+    margin-top: 700px;
+  }
+
+.contact {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.about {
+    color: white;
+    margin: 40px;
+}
+
+.bd-notification {
+    color: white;
+    text-decoration:none; 
+    cursor:pointer;  
+}

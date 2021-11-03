@@ -4,7 +4,12 @@
         background-repeat:  no-repeat;
         background-attachment: fixed;
         background-size:  cover;
-        /* background-color: #999; */
+        display: block; 
+      max-width: 100%;
+      
+}
+
+/* background-color: #999; */
 
  }
 /* * {

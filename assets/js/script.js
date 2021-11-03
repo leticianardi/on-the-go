@@ -1,4 +1,50 @@
-let map;
+// variables for API keys and ID
+var apiKey = "AIzaSyDmHfuQJwMCXi2eNPE0MEeUQVYZvBRCCqY";
+
+// global variables
+// this is the variable that takes user input???
+var mapSearchInput = document.querySelector("#map-search-input");
+// do we need a variable for the lat and lng?
+var cordinatesLatLng
+
+
+// fetch function, when response from API comes back, run refuge API function
+function getMap(location) {
+    // this gets the location of the map - need to have a string for the url
+
+    // todo https://maps.googleapis.com/maps/api/geocode/json?address=los%20angeles%20CA&key=AIzaSyDmHfuQJwMCXi2eNPE0MEeUQVYZvBRCCqY
+
+    var requestURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + location + "&key" + apiKey
+        fetch(requestURL)
+            .then(function (response) {
+                console.log(response)
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data, location);
+            })
+}
+
+// prevent default behavior of a form 
+// todo take in the search input value and replace spaces with %20 search [split and join] for " " repalce with %20
+function formSubmit(event) {
+    event.preventDefault();
+    
+}
+
+// todo event listners
+
+
+    
+
+
+
+    
+    
+    
+    
+    
+    let map;
 var bathroomsList = [];
 // function initMap() {
 //   map = new google.maps.Map(document.getElementById("map"), {
@@ -88,29 +134,3 @@ const eqfeed_callback = function (results) {
         });
     }
 };
-// toggling the menu
-/* const menu = document.querySelector(".menu");
-const menuItems = document.querySelectorAll(".menuItem");
-const hamburger= document.querySelector(".hamburger");
-const closeIcon= document.querySelector(".closeIcon");
-const menuIcon = document.querySelector(".menuIcon");
-
-function toggleMenu() {
-  if (menu.classList.contains("showMenu")) {
-    menu.classList.remove("showMenu");
-    closeIcon.style.display = "none";
-    menuIcon.style.display = "block";
-  } else {
-    menu.classList.add("showMenu");
-    closeIcon.style.display = "block";
-    menuIcon.style.display = "none";
-  }
-
-  menuItems.forEach( 
-    function(menuItem) { 
-      menuItem.addEventListener("click", toggleMenu);
-    }
-  )  
-}
-
-hamburger.addEventListener("click", toggleMenu); */
