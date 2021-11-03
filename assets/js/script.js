@@ -20,17 +20,18 @@ var bathroomsList = [];
 
 async function myMap() {
     var mapProp = {
-        center: new google.maps.LatLng(37.7586995, -122.120850),
-        zoom: 11,
+        center: new google.maps.LatLng(37.7613568, -122.4399466),
+        zoom: 13.12,
         mapTypeId: "terrain",
 
     };
-    const uluru = { lat: 37.344, lng: -122.036 };
+      
+   
     // insert geocoding 
     // fetch result to store lat and lng
     let lat 
     let lng
-    fetch(`https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=5&lat=${37.7586995}&lng=${-122.120850}`)
+    fetch(`https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=5&lat=${37.7613568}&lng=${-122.4399466}`)
         .then(response => response.json())
         .then(data => {
             for (i = 0; i < data.length; i++) {
