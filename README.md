@@ -1,9 +1,7 @@
 # JavaScript: Project Game Generator 
 
-[![github repo size](https://img.shields.io/github/repo-size/leticianardi/on-the-go?style=plastic)](https://github.com/leticianardi)
-[![alt-text](image-url)](url-to-point-to)
-[![alt-text](image-url)](url-to-point-to)
-[![alt-text](image-url)](url-to-point-to)
+
+
 
 
   ## Description
@@ -42,4 +40,8 @@
   ## License
   
   [![License](https://img.shields.io/badge/license-MIT-blue)](https://choosealicense.com/licenses/mit/)
+  [![github repo size](https://img.shields.io/github/repo-size/leticianardi/on-the-go?style=plastic)](https://github.com/leticianardi)
+  [![alt-text](https://img.shields.io/github/downloads/leticianardi/on-the-go/latest/total)](https://github.com/leticianardi)
+  [![alt-text](https://img.shields.io/github/contributors/leticianardi/on-the-go)](https://github.com/leticianardi)
+  [![alt-text](https://img.shields.io/github/issues-raw/leticianardi/on-the-go)](https://github.com/leticianardi)
   
