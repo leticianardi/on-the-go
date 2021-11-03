@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/app.js"></script>
+
         <title>On the Go</title>
 
     </head>
@@ -104,11 +107,9 @@
                 
                 <!-- div class="container" -->
                 <div class="mapouter">
-                    <figure class="image is-1by1">
-                        <div class="gmap_canvas class=" image is-1by1"><iframe class="has-ratio"
-                                src="https://www.google.com/maps/d/embed?mid=1Hd22_2CbXDCFLYyE5ggYC1mw1yBbpW_j" width="640"
-                                height="480"></iframe>
-                        </div>
+                    <!-- <figure class="image is-1by1"> -->
+                        <div id="map"></div>
+                        <div id="googleMap" style="width:auto;height: 1000px;"></div>
                     </figure>
                 </div>
                 
@@ -132,10 +133,10 @@
     
 
 
-        
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmHfuQJwMCXi2eNPE0MEeUQVYZvBRCCqY&callback=myMap&v=weekly"
+          ></script>
         <!-- link to the java script file for user interaction/ site functionality -->
-        <script src="assets/js/script.js"></script>
-        <script src="assets/js/app.js"></script>
     </body>
     </html>
     
