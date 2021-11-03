@@ -1,5 +1,11 @@
 # JavaScript: Project Game Generator 
 
+[![github repo size](https://img.shields.io/github/repo-size/leticianardi/on-the-go?style=plastic)](https://github.com/leticianardi)
+[![alt-text](image-url)](url-to-point-to)
+[![alt-text](image-url)](url-to-point-to)
+[![alt-text](image-url)](url-to-point-to)
+
+
   ## Description
   ### Driving as a ride-share driver is hard enough as it is. Finding a restroom in 2021 should be the easy part. Unfortuatly, its not. Most businesses, gas stations, grocery, and drug stores keep their facilities locked. There are portables scattered across the city but most are locked after hours. Its an unreliable and time consuming process. "INSERT FINAL APP NAME HERE" elimnates the guessing and saves drivers money by identifing locations with an open restroom, updated by users of the app. When a driver is looking for a bathroom, then they can find one within the app, rate the experience, and confirm it is open. Made using...
   
