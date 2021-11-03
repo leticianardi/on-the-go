@@ -119,8 +119,9 @@ async function myMap() {
 
     // insert geocoding 
     // fetch result to store lat and lng
+    var mapStart = 'https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=5&lat=' + 37.7743989 + '&lng=' + -122.4179095
   
-    await fetch(`https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=5&lat=${37.7613568}&lng=${-122.4399466}`)
+    fetch(mapStart)
         .then(response => response.json())
         .then(data => {
             for (i = 0; i < data.length; i++) {
