@@ -1,19 +1,13 @@
 // variables for API keys and ID
+let lat 
+let lng 
 var apiKey = "AIzaSyDmHfuQJwMCXi2eNPE0MEeUQVYZvBRCCqY";
-
-// global variables
-// this is the variable that takes user input???
 var mapSearchInput = document.querySelector("#map-search-input");
 // do we need a variable for the lat and lng?
 var cordinatesLatLng
 
 
-// fetch function, when response from API comes back, run refuge API function
 function getMap(location) {
-    // this gets the location of the map - need to have a string for the url
-
-    // todo https://maps.googleapis.com/maps/api/geocode/json?address=los%20angeles%20CA&key=AIzaSyDmHfuQJwMCXi2eNPE0MEeUQVYZvBRCCqY
-
     var requestURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + location + "&key" + apiKey
         fetch(requestURL)
             .then(function (response) {
@@ -24,9 +18,6 @@ function getMap(location) {
                 console.log(data, location);
             })
 }
-
-// prevent default behavior of a form 
-// todo take in the search input value and replace spaces with %20 search [split and join] for " " repalce with %20
 function formSubmit(event) {
     event.preventDefault();
     
@@ -65,12 +56,6 @@ var bathroomsList = [];
 // }
 
 async function myMap() {
-    var mapProp = {
-        center: new google.maps.LatLng(37.7613568, -122.4399466),
-        zoom: 13.12,
-        mapTypeId: "terrain",
-
-    };
       
        // Call Geocode
     //geocode();
@@ -99,8 +84,8 @@ async function myMap() {
 
         
         // Geometry
-        let lat = response.data.results[0].geometry.location.lat;
-        let lng = response.data.results[0].geometry.location.lng;
+         lat = response.data.results[0].geometry.location.lat;
+         lng = response.data.results[0].geometry.location.lng;
                 console.log(lat);
         console.log(lng);
 
@@ -109,18 +94,18 @@ async function myMap() {
         
      console.log(geometryOutput);
 
-        // Output to app
-        document.getElementById('geometry').innerHTML = geometryOutput;
-      })
-      .catch(function(error){
-        console.log(error);
-      });
-    }
+
 
     // insert geocoding 
     // fetch result to store lat and lng
-    var mapStart = 'https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=5&lat=' + 37.7743989 + '&lng=' + -122.4179095
-  
+    var mapStart = 'https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=5&lat=' + lat + '&lng=' + lng
+    var mapProp = {
+      center: new google.maps.LatLng(lat, lng),
+      zoom: 13.12,
+      mapTypeId: "terrain",
+
+  };
+
     fetch(mapStart)
         .then(response => response.json())
         .then(data => {
@@ -130,7 +115,6 @@ async function myMap() {
                 bathroomsList.push(dataPoint)
             }
             
-
         })
         .then(()=> {    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
         console.log(bathroomsList);
@@ -146,8 +130,9 @@ async function myMap() {
     
         }
         
-
-        }) 
+      })
+    }
+        )}
 
 }
 
